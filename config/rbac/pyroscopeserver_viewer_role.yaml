@@ -1,0 +1,20 @@
+# permissions for end users to view pyroscopeservers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pyroscopeserver-viewer-role
+rules:
+- apiGroups:
+  - operator.pyroscope.io
+  resources:
+  - pyroscopeservers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - operator.pyroscope.io
+  resources:
+  - pyroscopeservers/status
+  verbs:
+  - get

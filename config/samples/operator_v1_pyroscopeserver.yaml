@@ -1,0 +1,6 @@
+apiVersion: operator.pyroscope.io/v1
+kind: PyroscopeServer
+metadata:
+  name: pyroscopeserver-sample
+spec:
+  # TODO(user): Add fields here

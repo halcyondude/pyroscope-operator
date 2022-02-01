@@ -1,0 +1,24 @@
+# permissions for end users to edit pyroscopeservers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pyroscopeserver-editor-role
+rules:
+- apiGroups:
+  - operator.pyroscope.io
+  resources:
+  - pyroscopeservers
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - operator.pyroscope.io
+  resources:
+  - pyroscopeservers/status
+  verbs:
+  - get
