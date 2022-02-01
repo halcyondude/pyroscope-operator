@@ -1,0 +1,6 @@
+domain: pyroscope.io
+layout:
+- go.kubebuilder.io/v3
+projectName: pyroscope-operator
+repo: github.com/pyroscope-io/operator
+version: "3"
