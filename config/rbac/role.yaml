@@ -8,6 +8,32 @@ rules:
 - apiGroups:
   - operator.pyroscope.io
   resources:
+  - pyroscopeprofiletargets
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - operator.pyroscope.io
+  resources:
+  - pyroscopeprofiletargets/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - operator.pyroscope.io
+  resources:
+  - pyroscopeprofiletargets/status
+  verbs:
+  - get
+  - patch
+  - update
+- apiGroups:
+  - operator.pyroscope.io
+  resources:
   - pyroscopeservers
   verbs:
   - create
